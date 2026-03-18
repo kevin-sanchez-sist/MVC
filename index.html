@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arquitectura MVC — Presentación Interactiva</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       SIDEBAR
+  ══════════════════════════════════════════ -->
+  <aside id="sidebar">
+
+    <div class="sidebar-logo">
+      <div class="label">Arquitectura de Software</div>
+      <div class="name"><em>MVC</em> + Capas</div>
+    </div>
+
+    <nav>
+      <!-- 3.1 MVC -->
+      <div class="nav-group">
+        <div class="nav-group-label">3.1 — Patrón MVC</div>
+        <div class="nav-item active"
+             style="--item-accent: var(--accent-m)"
+             data-panel="mvc-overview">
+          <span class="nav-dot"></span>
+          Diagrama de capas
+        </div>
+        <div class="nav-item"
+             style="--item-accent: var(--accent-m)"
+             data-panel="mvc-vs-api">
+          <span class="nav-dot"></span>
+          MVC tradicional vs API
+        </div>
+        <div class="nav-item"
+             style="--item-accent: var(--accent-m)"
+             data-panel="http-flow">
+          <span class="nav-dot"></span>
+          Flujo HTTP
+        </div>
+      </div>
+
+      <!-- 3.2 Servicios -->
+      <div class="nav-group">
+        <div class="nav-group-label">3.2 — Patrón Servicios</div>
+        <div class="nav-item"
+             style="--item-accent: var(--accent-s)"
+             data-panel="service-pattern">
+          <span class="nav-dot"></span>
+          Capa de servicios
+        </div>
+      </div>
+
+      <!-- 3.3 Repositorios -->
+      <div class="nav-group">
+        <div class="nav-group-label">3.3 — Patrón Repositorio</div>
+        <div class="nav-item"
+             style="--item-accent: var(--accent-r)"
+             data-panel="repo-pattern">
+          <span class="nav-dot"></span>
+          Capa de repositorio
+        </div>
+      </div>
+
+      <!-- 3.4 Integración -->
+      <div class="nav-group">
+        <div class="nav-group-label">3.4 — Integración</div>
+        <div class="nav-item"
+             style="--item-accent: var(--accent-c)"
+             data-panel="layer-removal">
+          <span class="nav-dot"></span>
+          ¿Qué pasa si quitamos capas?
+        </div>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      C# .NET · Web API<br/>
+      MVC · Service · Repository
+    </div>
+
+  </aside>
+
+  <!-- ══════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════ -->
+  <main id="main">
+
+    <!-- Panel: Diagrama de capas -->
+    <section class="panel active" id="panel-mvc-overview"
+             style="--panel-accent: var(--accent-m)">
+      <div class="panel-eyebrow">3.1 · Patrón MVC</div>
+      <h1 class="panel-title">Diagrama de <em>capas</em></h1>
+      <p class="panel-lead">
+        Haz clic en cada capa para ver su responsabilidad dentro del patrón.
+      </p>
+      <!-- js module: modules/mvc-overview.js -->
+      <div id="sim-mvc-overview" class="sim-box">
+        <div class="sim-placeholder">
+          <p>Módulo <b>mvc-overview.js</b> — pendiente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel: MVC tradicional vs API -->
+    <section class="panel" id="panel-mvc-vs-api"
+             style="--panel-accent: var(--accent-m)">
+      <div class="panel-eyebrow">3.1 · Patrón MVC</div>
+      <h1 class="panel-title">MVC tradicional <em>vs</em> Web API</h1>
+      <p class="panel-lead">
+        ¿Qué cambia cuando no hay Vista? Compara las dos variantes lado a lado.
+      </p>
+      <!-- js module: modules/mvc-vs-api.js -->
+      <div id="sim-mvc-vs-api" class="sim-box">
+        <div class="sim-placeholder">
+          <p>Módulo <b>mvc-vs-api.js</b> — pendiente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel: Flujo HTTP -->
+    <section class="panel" id="panel-http-flow"
+             style="--panel-accent: var(--accent-c)">
+      <div class="panel-eyebrow">3.1 · 3.4 · Flujo completo</div>
+      <h1 class="panel-title">Flujo de una <em>petición HTTP</em></h1>
+      <p class="panel-lead">
+        Desde el cliente hasta la base de datos, capa por capa.
+      </p>
+      <!-- js module: modules/http-flow.js -->
+      <div id="sim-http-flow" class="sim-box">
+        <div class="sim-placeholder">
+          <p>Módulo <b>http-flow.js</b> — pendiente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel: Patrón Servicios -->
+    <section class="panel" id="panel-service-pattern"
+             style="--panel-accent: var(--accent-s)">
+      <div class="panel-eyebrow">3.2 · Patrón Servicios</div>
+      <h1 class="panel-title">La capa de <em>servicios</em></h1>
+      <p class="panel-lead">
+        ¿Por qué la lógica de negocio no debe vivir en el Controller?
+      </p>
+      <!-- js module: modules/service-pattern.js -->
+      <div id="sim-service-pattern" class="sim-box">
+        <div class="sim-placeholder">
+          <p>Módulo <b>service-pattern.js</b> — pendiente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel: Patrón Repositorio -->
+    <section class="panel" id="panel-repo-pattern"
+             style="--panel-accent: var(--accent-r)">
+      <div class="panel-eyebrow">3.3 · Patrón Repositorio</div>
+      <h1 class="panel-title">La capa de <em>repositorio</em></h1>
+      <p class="panel-lead">
+        Abstrae la persistencia: el resto del sistema no sabe cómo se guardan los datos.
+      </p>
+      <!-- js module: modules/repo-pattern.js -->
+      <div id="sim-repo-pattern" class="sim-box">
+        <div class="sim-placeholder">
+          <p>Módulo <b>repo-pattern.js</b> — pendiente</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel: ¿Qué pasa si quitamos capas? -->
+    <section class="panel" id="panel-layer-removal"
+             style="--panel-accent: var(--accent-c)">
+      <div class="panel-eyebrow">3.4 · Integración</div>
+      <h1 class="panel-title">¿Qué pasa si <em>quitamos</em> una capa?</h1>
+      <p class="panel-lead">
+        Simula qué ocurre cuando eliminas el Service o el Repository del flujo.
+      </p>
+      <!-- js module: modules/layer-removal.js -->
+      <div id="sim-layer-removal" class="sim-box">
+        <div class="sim-placeholder">
+          <p>Módulo <b>layer-removal.js</b> — pendiente</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       ROUTER — navegación entre paneles
+  ══════════════════════════════════════════ -->
+  <script type="module">
+    import { init as initMvcOverview }    from './modules/mvc-overview.js';
+    import { init as initHttpFlow }       from './modules/http-flow.js';
+    import { init as initMvcVsApi }       from './modules/mvc-vs-api.js';
+    import { init as initServicePattern } from './modules/service-pattern.js';
+    import { init as initRepoPattern }    from './modules/repo-pattern.js';
+    import { init as initLayerRemoval }   from './modules/layer-removal.js';
+
+    // Boot all modules
+    initMvcOverview(document.getElementById('sim-mvc-overview'));
+    initHttpFlow(document.getElementById('sim-http-flow'));
+    initMvcVsApi(document.getElementById('sim-mvc-vs-api'));
+    initServicePattern(document.getElementById('sim-service-pattern'));
+    initRepoPattern(document.getElementById('sim-repo-pattern'));
+    initLayerRemoval(document.getElementById('sim-layer-removal'));
+
+    // ── Panel router ──────────────────────────────────────
+    const navItems = document.querySelectorAll('.nav-item');
+    const panels   = document.querySelectorAll('.panel');
+
+    function showPanel(panelId) {
+      panels.forEach(p => p.classList.remove('active'));
+      navItems.forEach(n => n.classList.remove('active'));
+
+      const target = document.getElementById(`panel-${panelId}`);
+      const navItem = document.querySelector(`[data-panel="${panelId}"]`);
+
+      if (target)  target.classList.add('active');
+      if (navItem) navItem.classList.add('active');
+
+      // scroll main to top on panel change
+      document.getElementById('main').scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        showPanel(item.dataset.panel);
+      });
+    });
+  </script>
+
+</body>
+</html>
